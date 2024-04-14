@@ -1,0 +1,47 @@
+---
+sidebar_position: 2
+---
+
+# Svg and Text Length
+
+Here is an example how we can use monospace fonts to calculate the width of the text. The width of the text is calculated by the following formula:
+
+width = (font-size*0.6)px * number of characters + 0.015625px
+
+```jsx
+import React from "react";
+import "./style.css";
+
+export default function App() {
+  const text = "1234567";
+  const width = String(0.6 * 20 * text.length);
+  console.log(width);
+  React.useEffect(() => {
+    const element = document.getElementById("text");
+    const cssObj = window.getComputedStyle(element, null);
+    console.log(cssObj.getPropertyValue("width"));
+    console.log(cssObj.getPropertyValue("font-family"));
+    console.log(element.getBoundingClientRect().width);
+  });
+  return (
+    <div>
+      <svg width={width} height="20" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="green" />
+        <text
+          id="text"
+          x={`${width / 2}`}
+          y="17"
+          fontSize="20"
+          fontFamily="'Courier New', monospace"
+          textAnchor="middle"
+          fill="red"
+        >
+          {text}
+        </text>
+      </svg>
+    </div>
+  );
+}
+```
+
+[link](https://stackblitz.com/edit/react-ocr4kn?file=src%2FApp.js,src%2Findex.js)

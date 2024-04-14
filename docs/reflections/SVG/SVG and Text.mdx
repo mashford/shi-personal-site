@@ -1,0 +1,25 @@
+---
+sidebar_position: 1
+---
+
+# Svg and Texts
+
+usually, a avg has a fixed size, but we can use the `width` and `height` attributes to make it responsive.
+
+```svg
+<svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="green" />
+  <circle cx="75" cy="50" r="40" fill="yellow" />
+  <text x="75" y="60" font-size="30" text-anchor="middle" fill="red">
+    SVG
+  </text>
+</svg>
+```
+
+import Svg from "./img/svg-and-text.svg";
+
+<Svg />
+
+[link](https://stackoverflow.com/questions/1732292/svg-text-font-with-fixed-width-height)
+
+unfortunately, we have to compute the text size manually, but we can use the `getBBox` method to get the text size.

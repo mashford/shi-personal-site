@@ -1,0 +1,117 @@
+---
+sidebar_position: 3
+---
+
+# Item Cards
+
+here is an example of Cards
+
+```TSX
+import React from 'react';
+
+function Cards() {
+  return (
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <img
+        className="w-full"
+        src="https://v1.tailwindcss.com/img/card-top.jpg"
+        alt="Sunset in the mountains"
+      />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p className="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+          nihil.
+        </p>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #photography
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #travel
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #winter
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default Cards;
+
+```
+
+Check this example [Link](https://stackblitz.com/edit/fe-examples?file=src%2Fmain.tsx)
+
+The above example is fine, but it can not be resized.
+
+## first: make the image responsive
+
+Please check out this link: https://v1.tailwindcss.com/course/structuring-a-basic-card
+
+let's modify the above example:
+
+```TSX
+import React from 'react';
+
+function Cards() {
+  return (
+    <div className="rounded overflow-hidden shadow-lg">
+      <div className="width-full relative">
+        <div className="relative pb-[50%]">
+          <img
+            className="absolute h-full w-full object-cover cursor-pointer"
+            src="https://v1.tailwindcss.com/img/card-top.jpg"
+            alt="Sunset in the mountains"
+          />
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <h1 className="font-bold text-xl mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+          The Coldest Sunset
+        </h1>
+        <div className="w-full relative pb-[50%]">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 300 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute h-full w-full object-cover bg-blue"
+          >
+            <foreignObject width="100%" height="100%">
+              <h1 className="font-bold text-xl mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+                The Coldest Sunset
+              </h1>
+              <p className="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </foreignObject>
+          </svg>
+        </div>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #photography
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #travel
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #winter
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default Cards;
+
+```
+
+Looks good, I made the image responsive, and the text is responsive too!

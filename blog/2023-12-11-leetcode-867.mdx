@@ -1,0 +1,46 @@
+---
+slug: leetcode-867
+title: 867. Transpose Matrix
+authors: [Shi]
+tags: [leetcode, matrix, easy]
+---
+
+Given a 2D integer array matrix, return the transpose of matrix.
+
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices. link: https://leetcode.com/problems/transpose-matrix/
+
+:::info Example
+
+Example 1:
+
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [[1,4,7],[2,5,8],[3,6,9]]
+
+Example 2:
+
+Input: matrix = [[1,2,3],[4,5,6]]
+Output: [[1,4],[2,5],[3,6]]
+
+:::
+
+```js
+/**
+ * @param {number[][]} matrix
+ * @return {number[][]}
+ */
+var transpose = function (matrix) {
+  if (!matrix.length) return;
+  const numOfCols = matrix[0].length;
+  const numOfRows = matrix.length;
+  const result = [];
+  for (let i = 0; i < numOfCols; i++) {
+    result.push([]);
+  }
+  for (let i = 0; i < numOfCols; i++) {
+    for (let j = 0; j < numOfRows; j++) {
+      result[i][j] = matrix[j][i];
+    }
+  }
+  return result;
+};
+```
