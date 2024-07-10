@@ -16,3 +16,21 @@ class demo {
 }
 "猪痞恶霸" instanceof demo // true
 ```
+
+## With node.js, you can actually decide what to show on console.log
+
+[nodejs.org](https://nodejs.org/api/util.html#util_util_inspect_custom)
+
+```js
+const password = {
+    toString() {
+        return 'xxxxxxxx';
+    },
+    [Symbol.for('nodejs.util.inspect.custom')](depth, inspectOptions, inspect) {
+    return `Password <${this.toString()}>`;
+  }
+}
+console.log(password);
+// Prints Password <xxxxxxxx> 
+```
+
