@@ -1,20 +1,21 @@
-# How to make const [a, b] = {a:1, b:2}
 
 ```js
+How to make const [a, b] = {a:1, b:2}
+
 Object.prototype[Symbol.iterator] = function(){
     return Object.values(this)[Symbol.iterator]()
 }
 ```
 
-## How to make "猪痞恶霸" instanceof demo
+## How to make instance instance of demo
 
 ```js
 class demo {
     static [Symbol.hasInstance](item) {
-        return item === "猪痞恶霸"
+        return item === "instance"
     }
 }
-"猪痞恶霸" instanceof demo // true
+"instance" instanceof demo // true
 ```
 
 ## With node.js, you can actually decide what to show on console.log
