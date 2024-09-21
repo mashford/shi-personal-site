@@ -1,9 +1,16 @@
-* Me:
+---
+slug: heeds-not-praise
+title: Heeds not Praise
+authors: [Shi]
+tags: [pride, courage, self-assuredness]
+---
+
+- Me:
 
 what does "A pride that dares, and heeds not praise, A stern and silent pride" mean
 
-* ChatGpt: 
+- ChatGPT:
 
 "A pride that dares, and heeds not praise, A stern and silent pride" describes a type of pride characterized by boldness and courage, yet it remains unaffected by external validation or recognition. It suggests a self-assuredness and inner strength that doesn't seek approval or acknowledgment from others. This pride is firm and resolute, expressed quietly and without fanfare. It emphasizes the idea of being confident and self-reliant, regardless of external opinions or acclaim.
 
-Me: Well said,  I give you that.
+Me: Well said, I give you that.

@@ -1,21 +1,20 @@
+# How to make `const [a, b] = {a:1, b:2}`
 
 ```js
-How to make const [a, b] = {a:1, b:2}
-
-Object.prototype[Symbol.iterator] = function(){
-    return Object.values(this)[Symbol.iterator]()
-}
+Object.prototype[Symbol.iterator] = function () {
+  return Object.values(this)[Symbol.iterator]();
+};
 ```
 
-## How to make instance instance of demo
+## How to make "instance" instanceof demo
 
 ```js
 class demo {
-    static [Symbol.hasInstance](item) {
-        return item === "instance"
-    }
+  static [Symbol.hasInstance](item) {
+    return item === "instance";
+  }
 }
-"instance" instanceof demo // true
+"instance" instanceof demo; // true
 ```
 
 ## With node.js, you can actually decide what to show on console.log
@@ -24,14 +23,13 @@ class demo {
 
 ```js
 const password = {
-    toString() {
-        return 'xxxxxxxx';
-    },
-    [Symbol.for('nodejs.util.inspect.custom')](depth, inspectOptions, inspect) {
+  toString() {
+    return "xxxxxxxx";
+  },
+  [Symbol.for("nodejs.util.inspect.custom")](depth, inspectOptions, inspect) {
     return `Password <${this.toString()}>`;
-  }
-}
+  },
+};
 console.log(password);
-// Prints Password <xxxxxxxx> 
+// Prints Password <xxxxxxxx>
 ```
-
