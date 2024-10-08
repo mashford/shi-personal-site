@@ -15,4 +15,4 @@ alert('It took ' + (b - a) + ' ms.');
 
 Use Date.now() only when you want to know the local time on user's machine.
 
-Should I have time,  I would pdf-fy this site https://xsleaks.dev/.
+Above is from this site https://xsleaks.dev/.

@@ -3,9 +3,9 @@
 
 `npm whoami`
 
-### /To use a token:
+### To use a token:
 
-Add in ~/.zshrc:
+Add in `~/.npmrc`:
 
 `//registry.npmjs.org/:_authToken=NPM_TOKEN`
 
