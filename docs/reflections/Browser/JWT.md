@@ -41,4 +41,20 @@ That's why we need JWT.
 
 - cookie：HTTPOnly 阻止 XSS，Secure 强制开启 HTTPS，还可以加上 Domain=yourdomain.com，SameSite=Strict。
 
-可以服务器生成一个相同长度的掩码，存在 localStorage 中，然后和 JWT 进行异或运算，同时防止 CSRF 和 XSS。
+所以可以服务器生成一个相同长度的掩码，存在 localStorage 中，然后和 JWT 进行异或运算，同时防止 CSRF 和 XSS。
+
+在这种情况下，服务器的 POST 请求返回头可以设置 cookie 为一段随机数 R，HTTP Only。response body 里可以设置 R xor JWT。 R xor JWT 存在 localStorage 中。
+
+以上方案实际上就是 CSRF token 和 JWT 同时部署。
+
+## Token 的轮换机制
+
+设置较短的 access token 有效期（如 15 分钟）。
+
+设置较长的 refresh token 有效期（如 7 天）。
+
+用户第一次访问的时候，服务器会在 response header 里设置两个 token， access token 和 refresh token。都是 http only 的。
+
+只有一个 token 的话，无法实现用户退出的操作。只能删除 token，对吗？
+
+不对，只有一个 token 也可以实现，只需要在数据库中加入当前 token 的编号。
