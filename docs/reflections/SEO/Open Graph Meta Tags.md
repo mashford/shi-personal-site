@@ -43,7 +43,7 @@ sidebar_position: 3
 
 **没加 OG Tags** 时分享：
 
-- 标题：自动取 <title> 或页面第一行文字
+- 标题：自动取 `<title>` 或页面第一行文字
 - 描述：随机抓取一段文字
 - 图片：可能取 logo、第一张图、或根本没有
 
@@ -68,6 +68,6 @@ sidebar_position: 3
 
 **Open Graph Meta Tags 就是“社交媒体分享时的名片”**——你不定义，它就乱抓；你定义好了，就能让每一次分享都变成高质量的广告位。
 
-如果你是 WordPress 站点，用 Yoast SEO 或 Rank Math 插件就能一键生成/编辑 OG Tags；如果是 Next.js/React 等，手动加到 <Head> 里也简单。
+如果你是 WordPress 站点，用 Yoast SEO 或 Rank Math 插件就能一键生成/编辑 OG Tags；如果是 Next.js/React 等，手动加到 `<head>` 里也简单。
 
 有具体页面想优化 OG Tags，或者想看示例代码？可以贴 URL 或告诉我页面类型，我帮你给出推荐写法！
