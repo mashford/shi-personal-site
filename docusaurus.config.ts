@@ -72,7 +72,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "reflectionsSidebar",
           position: "left",
-          label: "Thoughts",
+          label: "Ideas",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
