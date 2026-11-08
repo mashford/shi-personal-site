@@ -25,3 +25,4 @@ yarn-error.log*
 ```
 # ignores
 _*
+!docs/reflections/Codex/_category_.json
