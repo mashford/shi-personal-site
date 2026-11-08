@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Writings of Shi
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
       </div>
@@ -22,11 +22,10 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Writings and Thoughts of Shi Xinyu"
+      title="Shi's Personal Site"
+      description="Notes, reflections, and experiments by Shi Xinyu."
     >
       <HomepageHeader />
       <main>
