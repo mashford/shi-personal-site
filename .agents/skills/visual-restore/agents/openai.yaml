@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Restore"
+  short_description: "Iterate on web designs with visual evidence"
+  default_prompt: "Use $visual-restore to reproduce this web design and verify it with browser screenshots before declaring it complete."
